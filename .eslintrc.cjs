@@ -11,7 +11,7 @@ module.exports = {
     parserOptions: {
         sourceType: "module",
         ecmaVersion: 2020,
-        extraFileExtensions: [".svelte"]
+        extraFileExtensions: [".svelte", ".json", ".yml"]
     },
     env: {
         browser: true,
@@ -20,7 +20,10 @@ module.exports = {
     },
     rules: {
         "semi": ["error", "never"],
-        "quotes": ["error", "double"]
+        "quotes": ["error", "double"],
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "object-curly-spacing": ["error", "always"],
+        "eol-last": ["error", "always"]
     },
     overrides: [
         {
@@ -28,6 +31,12 @@ module.exports = {
             parser: "svelte-eslint-parser",
             parserOptions: {
                 parser: "@typescript-eslint/parser"
+            }
+        },
+        {
+            files: ["*.json", "*.yml"],
+            rules: {
+                "indent": ["error", 2]
             }
         }
     ]
