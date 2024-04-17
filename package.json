@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "ci": "pnpm build --mode staging",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",
     "lint": "eslint .",
-    "typegen": "pnpx supabase gen types typescript --project-id scxpsjipuoxztbxumbaq > ./src/lib/types/supabase.ts"
+    "typegen": "pnpx supabase gen types typescript --project-id scxpsjipuoxztbxumbaq > src/lib/types/Supabase.ts"
   },
   "devDependencies": {
     "@supabase/supabase-js": "^2.42.4",
