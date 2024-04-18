@@ -14,7 +14,8 @@
             <button class="flex w-full justify-center rounded-md border p-1.5
                        disabled:cursor-not-allowed disabled:opacity-50
                        bg-white border-gray-300
-                       dark:bg-zinc-100 hover:brightness-[98%] dark:hover:brightness-[98%] duration-150" name="provider" type="submit"
+                       dark:bg-zinc-100 hover:brightness-[98%] dark:hover:brightness-[98%] duration-150" name="provider"
+                    type="submit"
                     value="google">
                 <svg class="h-6 w-auto"
                      preserveAspectRatio="xMidYMid"

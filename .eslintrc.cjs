@@ -11,7 +11,7 @@ module.exports = {
     parserOptions: {
         sourceType: "module",
         ecmaVersion: 2020,
-        extraFileExtensions: [".svelte", ".json", ".yml"]
+        extraFileExtensions: [".svelte", ".ts", ".json", ".yml"]
     },
     env: {
         browser: true,

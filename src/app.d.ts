@@ -13,6 +13,7 @@ declare global {
             readonly VITE_PUBLIC_SUPABASE_URL: string
             readonly VITE_PUBLIC_SUPABASE_ANON_KEY: string
         }
+
         interface Locals {
             user: User | null
         }
