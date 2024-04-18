@@ -1,3 +1,15 @@
+<script lang="ts">
+    import { goto } from "$app/navigation"
+    import { sessionStore } from "@stores/SessionStore"
+    import { onMount } from "svelte"
+    import { get } from "svelte/store"
+
+    onMount(async () => {
+        if (get(sessionStore)?.user)
+            await goto("/app")
+    })
+</script>
+
 <div class="flex flex-col items-center justify-center min-h-screen">
     <div class="flex flex-col items-center rounded-lg shadow-md
             p-6 w-full max-w-md space-y-3

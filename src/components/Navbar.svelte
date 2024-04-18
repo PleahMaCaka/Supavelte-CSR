@@ -1,6 +1,15 @@
 <script lang="ts">
+    import { goto } from "$app/navigation"
+    import { supabase } from "@lib/Supabase"
     import { stateStore } from "@stores/StateStore"
     import { get } from "svelte/store"
+
+    const logout = async () => {
+        const { error } = await supabase.auth.signOut()
+        if (error)
+            alert("Fail to logout")
+        await goto("/")
+    }
 </script>
 
 <div class="navbar bg-base-100 shadow-xl rounded-b-box gap-2 px-4">
@@ -23,7 +32,8 @@
             <span class="indicator">
                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"><path
-                         d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"
+                         d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                         stroke-linecap="round" stroke-linejoin="round"
                          stroke-width="2" /></svg>
                 {#if get(stateStore).unreadNotify}
                     <span class="badge badge-xs badge-primary indicator-item" />
@@ -35,7 +45,8 @@
                     <div class="alert shadow-lg" role="alert">
                         <svg class="stroke-info shrink-0 w-6 h-6" fill="none" viewBox="0 0 24 24"
                              xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"
+                            <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"
+                                  stroke-linejoin="round"
                                   stroke-width="2"></path>
                         </svg>
                         <div>
@@ -63,7 +74,9 @@
             <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52">
                 <li><a href="/">Profile</a></li>
                 <li><a href="/">Settings</a></li>
-                <li><a href="/api/auth/logout">Logout</a></li>
+                <li>
+                    <button on:click={logout}>Logout</button>
+                </li>
             </ul>
         </div>
     </div>
