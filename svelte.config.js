@@ -6,7 +6,9 @@ const config = {
     preprocess: vitePreprocess(),
     kit: {
         adapter: adapter({
-            strict: false
+            strict: false,
+            pages: "build",
+            assets: "build",
         }),
         alias: {
             "@lib/*": "./src/lib/*",
