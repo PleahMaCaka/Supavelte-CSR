@@ -1,13 +1,35 @@
 <script lang="ts">
     import { goto } from "$app/navigation"
+    import { supabase } from "@lib/Supabase"
     import { sessionStore } from "@stores/SessionStore"
+    import type { Provider } from "@supabase/supabase-js"
     import { onMount } from "svelte"
     import { get } from "svelte/store"
+
+    let loading = false
 
     onMount(async () => {
         if (get(sessionStore)?.user)
             await goto("/app")
     })
+
+    const oauth = async (provider: Provider) => {
+        loading = true
+
+        const { error } = await supabase.auth.signInWithOAuth({
+            provider,
+            options: {
+                queryParams: {
+                    access_type: "offline",
+                    prompt: "consent"
+                }
+            }
+        })
+
+        if (error) console.error("Error logging in with", provider, error)
+
+        loading = false
+    }
 </script>
 
 <div class="flex flex-col items-center justify-center min-h-screen">
@@ -27,8 +49,9 @@
                        disabled:cursor-not-allowed disabled:opacity-50
                        bg-white border-gray-300
                        dark:bg-zinc-100 hover:brightness-[98%] dark:hover:brightness-[98%] duration-150" name="provider"
-                    type="submit"
-                    value="google">
+                    disabled={loading}
+                    on:click={()=> oauth("google")}
+            >
                 <svg class="h-6 w-auto"
                      preserveAspectRatio="xMidYMid"
                      viewBox="0 0 256 262"

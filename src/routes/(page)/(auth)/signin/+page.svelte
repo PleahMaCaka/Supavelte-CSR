@@ -2,35 +2,15 @@
     import { goto } from "$app/navigation"
     import AuthInput from "@components/auth/AuthInput.svelte"
     import { supabase } from "@lib/Supabase"
-    import { stateStore } from "@stores/StateStore"
-    import type { Provider } from "@supabase/supabase-js"
-    import { get } from "svelte/store"
 
     let loading = false
-    let email = "", password = "", provider = get(stateStore).authProvider
+    let email = "", password = ""
 
     const signIn = async () => {
         loading = true
 
-        if (provider) {
-            const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: provider as Provider,
-                options: {
-                    redirectTo: import.meta.env.DEV ?
-                        "http://localhost:5173/api/auth/callback" :
-                        import.meta.env.PROD_URL + "/api/auth/callback"
-                }
-            })
-
-            if (error) throw new Error(error.message)
-
-            await goto(data.url)
-            loading = false
-            stateStore.update(state => ({ ...state, authProvider: null }))
-            return
-        }
-
-        if (!email || !password) throw new Error("Email and password are required")
+        if (!email || !password)
+            throw new Error("Email and password are required")
 
         const { error } = await supabase.auth.signInWithPassword({ email, password })
 
