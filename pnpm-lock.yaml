@@ -7,21 +7,19 @@ settings:
 overrides:
   whatwg-url: ^14.0.0
 
-dependencies:
+devDependencies:
   '@capacitor/android':
     specifier: ^6.0.0
     version: 6.0.0(@capacitor/core@6.0.0)
+  '@capacitor/cli':
+    specifier: ^6.0.0
+    version: 6.0.0
   '@capacitor/core':
     specifier: ^6.0.0
     version: 6.0.0
   '@capacitor/ios':
     specifier: ^6.0.0
     version: 6.0.0(@capacitor/core@6.0.0)
-
-devDependencies:
-  '@capacitor/cli':
-    specifier: ^6.0.0
-    version: 6.0.0
   '@supabase/supabase-js':
     specifier: ^2.42.4
     version: 2.42.4
@@ -106,7 +104,7 @@ packages:
       '@capacitor/core': ^6.0.0
     dependencies:
       '@capacitor/core': 6.0.0
-    dev: false
+    dev: true
 
   /@capacitor/cli@6.0.0:
     resolution: {integrity: sha512-6z30P0mr53l0VXPwFjzDVuKIt1991bqUSSfShTT2efWN+rBSGSAH2bPID6qSZornH1n5R5Lh/UHq/aGuW523MQ==}
@@ -139,7 +137,7 @@ packages:
     resolution: {integrity: sha512-NvxIQsJcMiIV+Le1DilR2GGyQQbDInfXK1UywGROQ5mycdFlW5XoAPZ+MKnFGB123RoEgE3uhDGgwTXUmSlX9A==}
     dependencies:
       tslib: 2.6.2
-    dev: false
+    dev: true
 
   /@capacitor/ios@6.0.0(@capacitor/core@6.0.0):
     resolution: {integrity: sha512-7mAs3gjWiE5DPM4AGPduqFSDGXCPwwqQRMzbohVway7/cTWnHomHV8mIojMZE4GILeWO2fILbyu3C8q9pHg2vg==}
@@ -147,7 +145,7 @@ packages:
       '@capacitor/core': ^6.0.0
     dependencies:
       '@capacitor/core': 6.0.0
-    dev: false
+    dev: true
 
   /@esbuild/aix-ppc64@0.20.2:
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -3285,6 +3283,7 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    dev: true
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
