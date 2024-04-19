@@ -2,10 +2,12 @@
     import { goto } from "$app/navigation"
     import AuthInput from "@components/auth/AuthInput.svelte"
     import { supabase } from "@lib/Supabase"
+    import { stateStore } from "@stores/StateStore"
     import type { Provider } from "@supabase/supabase-js"
+    import { get } from "svelte/store"
 
     let loading = false
-    let email = "", password = "", provider = ""
+    let email = "", password = "", provider = get(stateStore).authProvider
 
     const signIn = async () => {
         loading = true
@@ -24,6 +26,7 @@
 
             await goto(data.url)
             loading = false
+            stateStore.update(state => ({ ...state, authProvider: null }))
             return
         }
 
