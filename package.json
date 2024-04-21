@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "ci": "pnpm build --mode staging",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -39,6 +38,7 @@
     "@capacitor/core": "^6.0.0",
     "@capacitor/ios": "^6.0.0"
   },
+  "packageManager": "pnpm@8.15.2",
   "pnpm": {
     "overrides": {
       "whatwg-url": "^14.0.0"
