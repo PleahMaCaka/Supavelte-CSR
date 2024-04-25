@@ -1,10 +1,5 @@
 import { sveltekit } from "@sveltejs/kit/vite"
-import { internalIpV4 } from "internal-ip"
 import { defineConfig } from "vitest/config"
-
-const isMobile =
-    process.env.TAURI_PLATFORM === "android" ||
-    process.env.TAURI_PLATFORM === "ios"
 
 export default defineConfig({
     clearScreen: false,
@@ -15,11 +10,6 @@ export default defineConfig({
     server: {
         host: "0.0.0.0",
         port: 5173,
-        hmr: isMobile ?? {
-            protocol: "ws",
-            host: await internalIpV4(),
-            port: 5174
-        },
         strictPort: true
     },
     build: {
