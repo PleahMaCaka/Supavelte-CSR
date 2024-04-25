@@ -12,5 +12,3 @@ vite.config.ts.timestamp-*
 .idea
 .vscode
 .fleet
-
-src-tauri/gen/*

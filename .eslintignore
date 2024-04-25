@@ -17,3 +17,5 @@ ios
 # for IDEs and editors (.vscode is covered by node_modules)
 .idea
 .fleet
+
+/src-tauri
