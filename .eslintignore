@@ -19,3 +19,5 @@ ios
 .fleet
 
 /src-tauri
+
+src/lib/types/Supabase.ts
