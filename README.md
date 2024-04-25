@@ -15,6 +15,15 @@ pnpm tauri dev
 
 ### for Android
 
+Before the running in the android you need to check some prerequisites:
+
+- Open the project in the Android Studio once over
+- Android SDK / NDK
+
+### Publish
+
+*WIP*
+
 ```bash
 pnpm tauri android dev # for development
 pnpm tauri android build # for build, but if you need apk file, use the android studio
@@ -30,7 +39,7 @@ pnpm tauri android init
 
 ## Throbleshooting
 
-###           
+###            
 
 ```
 WARN Issues with peer dependencies found
