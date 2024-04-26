@@ -13,7 +13,7 @@ importers:
     devDependencies:
       '@supabase/supabase-js':
         specifier: ^2.42.5
-        version: 2.42.6
+        version: 2.42.7
       '@sveltejs/adapter-static':
         specifier: ^3.0.1
         version: 3.0.1(@sveltejs/kit@2.5.7(@sveltejs/vite-plugin-svelte@3.1.0(svelte@4.2.15)(vite@5.2.10(@types/node@20.12.7)))(svelte@4.2.15)(vite@5.2.10(@types/node@20.12.7)))
@@ -393,8 +393,8 @@ packages:
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  '@supabase/auth-js@2.64.0':
-    resolution: {integrity: sha512-tC1fhVvzYlPA6gpSLR/BH2hM06ZZzSpi0oUOkNLm4lGrOUpsDa552fJMx9uuiEQ2/fpIbTh7MwjXb+zxVXWz6Q==}
+  '@supabase/auth-js@2.64.1':
+    resolution: {integrity: sha512-tA2PXLoWEzhD0N1Vysree+HftfeWBbFV0E+taND5rj/pZTjkwKq/9GlrnXkbs5pnw+tsnABDRo2WLZmymihGdA==}
 
   '@supabase/functions-js@2.3.1':
     resolution: {integrity: sha512-QyzNle/rVzlOi4BbVqxLSH828VdGY1RElqGFAj+XeVypj6+PVtMlD21G8SDnsPQDtlqqTtoGRgdMlQZih5hTuw==}
@@ -412,8 +412,8 @@ packages:
   '@supabase/storage-js@2.5.5':
     resolution: {integrity: sha512-OpLoDRjFwClwc2cjTJZG8XviTiQH4Ik8sCiMK5v7et0MDu2QlXjCAW3ljxJB5+z/KazdMOTnySi+hysxWUPu3w==}
 
-  '@supabase/supabase-js@2.42.6':
-    resolution: {integrity: sha512-3/dE1FnHsjk1btHpLs4xuF5rP2+CLpI8WVGuyqgiyE94eYjecoKDw8kj8fPrs/PuILRvk5vwH0LyW/DndKNy2Q==}
+  '@supabase/supabase-js@2.42.7':
+    resolution: {integrity: sha512-BEIEYe5KJpzd8Z3k4CKyjNuBmgSihDdE8MJO/Fg7O5h/lQg8qOp1MMWLWPP5aVKt4TYled/W82ePNJflqc2JbQ==}
 
   '@sveltejs/adapter-static@3.0.1':
     resolution: {integrity: sha512-6lMvf7xYEJ+oGeR5L8DFJJrowkefTK6ZgA4JiMqoClMkKq0s6yvsd3FZfCFvX1fQ0tpCD7fkuRVHsnUVgsHyNg==}
@@ -2129,7 +2129,7 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@supabase/auth-js@2.64.0':
+  '@supabase/auth-js@2.64.1':
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
@@ -2159,9 +2159,9 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/supabase-js@2.42.6':
+  '@supabase/supabase-js@2.42.7':
     dependencies:
-      '@supabase/auth-js': 2.64.0
+      '@supabase/auth-js': 2.64.1
       '@supabase/functions-js': 2.3.1
       '@supabase/node-fetch': 2.6.15
       '@supabase/postgrest-js': 1.15.2
