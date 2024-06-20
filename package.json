@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "test": "vitest",
+    "test": "pnpm test:vitest test:supabase",
+    "test:vitest": "vitest",
+    "test:supabase": "supabase test db",
     "lint": "eslint .",
     "typegen": "supabase gen types typescript --linked > src/lib/ts/gen/supabase.d.ts",
     "tauri": "tauri"
