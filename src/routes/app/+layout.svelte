@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation"
-    import Navbar from "@components/Navbar.svelte"
-    import { sessionStore as session } from "@stores/SessionStore"
+    import Navbar from "@lib/components/TopNav.svelte"
+    import { session as session } from "@stores/session"
 
     $: {
         if (location.pathname.startsWith("/app")) {

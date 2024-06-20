@@ -1,6 +1,6 @@
 {
   "name": "supavelte",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,7 +13,7 @@
     "test:vitest": "vitest",
     "test:supabase": "supabase test db",
     "lint": "eslint .",
-    "typegen": "supabase gen types typescript --linked > src/lib/ts/gen/supabase.d.ts",
+    "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts",
     "tauri": "tauri"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.4.0",
   "pnpm": {
     "overrides": {
       "whatwg-url": "^14.0.0"

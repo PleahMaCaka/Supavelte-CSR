@@ -14,7 +14,7 @@ const config = {
             "@components/*": "./src/components/*",
             "@stores/*": "./src/lib/stores/*",
             "@routes/*": "./src/routes/*",
-            "@typegen/*": "./src/lib/ts/gen/*"
+            "@typegen/*": "./src/lib/types/gen/*"
         }
     }
 }

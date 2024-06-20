@@ -1,17 +1,15 @@
 import { writable } from "svelte/store"
 
-export interface StateStore {
+export interface State {
     unreadNotify: boolean
 }
 
 export const stateStore = (() => {
-    const { set, subscribe, update } = writable<StateStore>({
+    const store = writable<State>({
         unreadNotify: true
     })
 
     return {
-        subscribe,
-        set,
-        update
+        ...store
     }
 })()

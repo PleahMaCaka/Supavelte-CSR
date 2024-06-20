@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation"
-    import { supabase } from "@lib/Supabase"
-    import { sessionStore } from "@stores/SessionStore"
+    import { supa } from "@lib/Supabase"
+    import { session } from "@stores/session"
     import type { Provider } from "@supabase/supabase-js"
     import { onMount } from "svelte"
     import { get } from "svelte/store"
@@ -9,14 +9,14 @@
     let loading = false
 
     onMount(async () => {
-        if (get(sessionStore)?.user)
+        if (get(session)?.user)
             await goto("/app")
     })
 
     const oauth = async (provider: Provider) => {
         loading = true
 
-        const { error } = await supabase.auth.signInWithOAuth({
+        const { error } = await supa.auth.signInWithOAuth({
             provider,
             options: {
                 queryParams: {

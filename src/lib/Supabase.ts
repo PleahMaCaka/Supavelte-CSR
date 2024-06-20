@@ -1,20 +1,7 @@
-import type { Database } from "@lib/ts/gen/supabase"
-import { createClient, type User } from "@supabase/supabase-js"
-import type { RequestEvent } from "@sveltejs/kit"
+import type { Database } from "@lib/types/gen/supabase"
+import { createClient } from "@supabase/supabase-js"
 
-export const supabase = createClient<Database>(
+export const supa = createClient<Database>(
     import.meta.env.VITE_PUBLIC_SUPABASE_URL,
     import.meta.env.VITE_PUBLIC_SUPABASE_ANON_KEY,
 )
-
-export async function isAuthorizedUser(event: RequestEvent): Promise<User | null> {
-    const { cookies } = event
-
-    const token = cookies.get("auth")
-
-    const { data, error } = await supabase.auth.getUser(token)
-
-    if (error) return null
-
-    return data.user
-}

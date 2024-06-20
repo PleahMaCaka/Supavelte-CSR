@@ -1,16 +1,16 @@
 <script lang="ts">
     import "../app.css"
-    import { supabase } from "@lib/Supabase"
-    import { sessionStore } from "@stores/SessionStore"
+    import { supa } from "@lib/Supabase"
+    import { session } from "@stores/session"
     import { onMount } from "svelte"
 
     onMount(() => {
-        supabase.auth.getSession().then(({ data }) => {
-            sessionStore.set(data.session)
+        supa.auth.getSession().then(({ data }) => {
+            session.set(data.session)
         })
 
-        supabase.auth.onAuthStateChange((_event, _session) => {
-            sessionStore.set(_session)
+        supa.auth.onAuthStateChange((_event, _session) => {
+            session.set(_session)
         })
     })
 </script>

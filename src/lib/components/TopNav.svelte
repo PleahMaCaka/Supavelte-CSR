@@ -1,11 +1,11 @@
 <script lang="ts">
     import { goto } from "$app/navigation"
-    import { supabase } from "@lib/Supabase"
-    import { stateStore } from "@stores/StateStore"
+    import { supa } from "@lib/Supabase"
+    import { stateStore } from "@stores/state"
     import { get } from "svelte/store"
 
     const logout = async () => {
-        const { error } = await supabase.auth.signOut()
+        const { error } = await supa.auth.signOut()
         if (error)
             alert("Fail to logout")
         await goto("/")
@@ -23,7 +23,7 @@
         </button>
     </div>
     <div class="flex-1">
-        <a class="btn btn-ghost text-xl" href="/">The App</a>
+        <a class="btn btn-ghost text-xl" href="/static">The App</a>
     </div>
     <div class="navbar-end">
         <!-- Notification -->
@@ -55,7 +55,7 @@
                         </div>
                         <button class="btn btn-sm">See</button>
                     </div>
-                    <p class="self-center bg-zinc-900 px-2 py-0.5 mt-1 rounded-box"><a href="/">See all >></a>
+                    <p class="self-center bg-zinc-900 px-2 py-0.5 mt-1 rounded-box"><a href="/static">See all >></a>
                     </p>
                 </div>
             </div>
@@ -72,8 +72,8 @@
             </div>
             <!-- Profile Dropdown-->
             <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52">
-                <li><a href="/">Profile</a></li>
-                <li><a href="/">Settings</a></li>
+                <li><a href="/static">Profile</a></li>
+                <li><a href="/static">Settings</a></li>
                 <li>
                     <button on:click={logout}>Logout</button>
                 </li>
