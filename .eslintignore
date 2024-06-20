@@ -16,4 +16,4 @@ package-lock.json
 
 /src-tauri
 
-src/lib/types/Supabase.ts
+src/lib/types/supabase.d.ts

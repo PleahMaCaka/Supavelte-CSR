@@ -1,4 +1,4 @@
-import type { Database } from "@lib/types/Supabase"
+import type { Database } from "@lib/ts/gen/supabase"
 import { createClient, type User } from "@supabase/supabase-js"
 import type { RequestEvent } from "@sveltejs/kit"
 
