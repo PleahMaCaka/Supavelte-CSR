@@ -1,10 +1,8 @@
 # Quick Start
 
-```
-pnpm run init
-pnpm tauri android dev
-```
-
+1. `pnpm run init`
+2. Open `.env` and fill out yours
+3. `pnpm tauri android dev`
 
 ## Development
 

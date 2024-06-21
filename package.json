@@ -14,8 +14,9 @@
     "test:supabase": "supabase test db",
     "lint": "eslint .",
     "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts",
-    "init": "pnpm i && pnpm init:android",
-    "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies && touch './src-tauri/gen/android/local.properties' && echo \"sdk.dir=$ANDROID_HOME\" > ./src-tauri/gen/android/local.properties",
+    "init": "pnpm i && cp .env.example .env && pnpm init:android",
+    "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies && pnpm init:android:properties",
+    "init:android:properties": "PTS_PATH=\"./src-tauri/gen/android/local.properties\" && touch $PTS_PATH && echo \"sdk.dir=$ANDROID_HOME\" > $PTS_PATH",
     "tauri": "tauri",
     "supabase": "supabase"
   },
