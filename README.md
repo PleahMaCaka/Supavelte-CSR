@@ -4,6 +4,11 @@
 2. Open `.env` and fill out yours
 3. `pnpm tauri android dev`
 
+### More Faster:
+```bash
+git clone https://github.com/pleahmacaka/supavelte-csr && cd supavelte-csr && pnpm run init && pnpm tauri android dev
+```
+
 ## Development
 
 ### for Web
