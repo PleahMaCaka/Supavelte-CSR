@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts",
     "init": "pnpm i && pnpm init:android",
-    "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies",
+    "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies && echo \"sdk.dir=$ANDROID_HOME\" > ./src-tauri/gen/android/local.properties",
     "tauri": "tauri",
     "supabase": "supabase"
   },
