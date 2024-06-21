@@ -14,7 +14,10 @@
     "test:supabase": "supabase test db",
     "lint": "eslint .",
     "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts",
-    "tauri": "tauri"
+    "init": "pnpm i && pnpm init:android",
+    "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies",
+    "tauri": "tauri",
+    "supabase": "supabase"
   },
   "devDependencies": {
     "@supabase/supabase-js": "^2.43.5",
