@@ -18,6 +18,7 @@
     "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies && pnpm init:android:properties",
     "init:android:properties": "PTS_PATH=\"./src-tauri/gen/android/local.properties\" && touch $PTS_PATH && echo \"sdk.dir=$ANDROID_HOME\" > $PTS_PATH",
     "tauri": "tauri",
+    "tauri:icon": "tauri icon static/favicon.png",
     "supabase": "supabase"
   },
   "devDependencies": {
