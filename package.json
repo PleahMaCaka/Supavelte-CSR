@@ -22,6 +22,12 @@
     "supabase": "supabase",
     "prepare": "husky"
   },
+  "packageManager": "pnpm@9.4.0",
+  "lint-staged": {
+    "src/**": [
+      "eslint"
+    ]
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.6.0",
@@ -42,6 +48,7 @@
     "globals": "^15.8.0",
     "husky": "^9.0.11",
     "internal-ip": "^8.0.0",
+    "lint-staged": "^15.2.7",
     "postcss": "^8.4.39",
     "process": "^0.11.10",
     "svelte": "^4.2.18",
@@ -53,7 +60,6 @@
     "vite": "^5.3.3",
     "vitest": "^2.0.1"
   },
-  "packageManager": "pnpm@9.4.0",
   "pnpm": {
     "overrides": {
       "whatwg-url": "^14.0.0"
