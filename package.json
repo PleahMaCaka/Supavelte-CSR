@@ -19,9 +19,11 @@
     "init:android:properties": "PTS_PATH=\"./src-tauri/gen/android/local.properties\" && touch $PTS_PATH && echo \"sdk.dir=$ANDROID_HOME\" > $PTS_PATH",
     "tauri": "tauri",
     "tauri:icon": "tauri icon static/favicon.png",
-    "supabase": "supabase"
+    "supabase": "supabase",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.6.0",
     "@supabase/supabase-js": "^2.44.3",
     "@sveltejs/adapter-static": "^3.0.2",
@@ -38,6 +40,7 @@
     "eslint": "^9.6.0",
     "eslint-plugin-svelte": "^2.41.0",
     "globals": "^15.8.0",
+    "husky": "^9.0.11",
     "internal-ip": "^8.0.0",
     "postcss": "^8.4.39",
     "process": "^0.11.10",
@@ -48,8 +51,7 @@
     "tslib": "^2.6.3",
     "typescript": "^5.5.3",
     "vite": "^5.3.3",
-    "vitest": "^2.0.1",
-    "@eslint/eslintrc": "^3.1.0"
+    "vitest": "^2.0.1"
   },
   "packageManager": "pnpm@9.4.0",
   "pnpm": {
