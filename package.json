@@ -22,7 +22,7 @@
     "supabase": "supabase",
     "prepare": "husky"
   },
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.5.0",
   "lint-staged": {
     "src/**": [
       "eslint"
