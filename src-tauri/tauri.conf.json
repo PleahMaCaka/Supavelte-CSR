@@ -4,7 +4,7 @@
   "identifier": "io.github.pleahmacaka.Supavelte",
   "build": {
     "frontendDist": "../build",
-    "devUrl": "http://0.0.0.0:5173/",
+    "devUrl": "http://0.0.0.0:1420/",
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build"
   },

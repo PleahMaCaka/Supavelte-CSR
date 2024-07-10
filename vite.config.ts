@@ -1,13 +1,26 @@
 import { sveltekit } from "@sveltejs/kit/vite"
-import { defineConfig } from "vitest/config"
+import { internalIpV4 } from "internal-ip"
+import { defineConfig } from "vite"
 
-export default defineConfig({
+// @ts-expect-error process
+const mobile = !!/android|ios/.exec(process.env.TAURI_ENV_PLATFORM)
+
+export default defineConfig(async () => ({
+    plugins: [await sveltekit()],
     clearScreen: false,
-    plugins: [sveltekit()],
-    test: {
-        include: ["tests/**/*.{test,spec}.{js,ts}"]
-    },
     server: {
-        strictPort: true
+        port: 1420,
+        strictPort: true,
+        host: mobile ? "0.0.0.0" : false,
+        hmr: mobile
+            ? {
+                protocol: "ws",
+                host: await internalIpV4(),
+                port: 1421,
+            }
+            : undefined,
+        watch: {
+            ignored: ["**/src-tauri/**"],
+        },
     }
-})
+}))
