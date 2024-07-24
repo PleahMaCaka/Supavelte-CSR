@@ -1,19 +1,18 @@
-# Quick Start 🚀
+# 🚀 Quick Start
 
-1. `pnpm run init`. 👨‍💻
-    - Will be generating android project files. (iOS not yet)
-2. Fill out `.env` 🛠️
-3. Connect your device using `adb` or run an emulator.
-4. `pnpm tauri android dev` 📲
+1. 👨‍💻`pnpm run init`
+    - Will be generating android project files. (iOS is not included, init your self)
+2. 🛠 ️Fill out `.env` file with your own values
+3. 🔗 Connect your device using `adb` or run an emulator
+4. 📲 `pnpm tauri android dev`
 
-### One-Line Quick Start: 🏎️
+### 🏎️ One-Line Quick Start
 
 ```bash
-git clone https://github.com/pleahmacaka/supavelte-csr && cd supavelte-csr && rm -rf .git && pnpm run init &&
-pnpm tauri android dev
+git clone https://github.com/pleahmacaka/supavelte-csr && cd supavelte-csr && rm -rf .git && pnpm run init && pnpm tauri android dev
 ```
 
-## Development 👨‍💻
+## 👨‍💻 Development
 
 ### Web:
 
@@ -22,13 +21,13 @@ pnpm install
 pnpm dev
 ```
 
-## Getting Started 💡
+## 💡 Getting Started
 
-### Desktop:
+### 🖥️ Desktop:
 
 `pnpm tauri dev`
 
-### Android: 📱
+### 📱 Android:
 
 Prerequisites:
 
@@ -37,11 +36,11 @@ Prerequisites:
 
 Commands: 'pnpm tauri android dev' 🚀, 'pnpm tauri android build' 📦
 
-#### To Re-gen Android Project ✨
+#### ✨ To Re-gen Android Project ✨
 
 After altering 'tauri.conf.json':
 Command: `pnpm tauri android init` 🔄
 
-### Signing APK 📝
+### 📝 Signing APK
 
-Check [official documentation](https://v2.tauri.app/distribute/apk-sign/). 📚
+📚 Checkout [official documentation](https://v2.tauri.app/distribute/apk-sign/).
