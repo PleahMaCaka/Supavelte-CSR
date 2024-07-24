@@ -31,7 +31,8 @@ export default [{
         "**/.fleet",
         "src-tauri",
         "src/lib/types/supabase.d.ts",
-        ".github/workflows/*"
+        ".github/workflows/*",
+        ".pnpm-store/*"
     ],
 }, ...compat.extends(
     "eslint:recommended",
