@@ -20,7 +20,14 @@
       "windows": [
         "main"
       ],
-      "permissions": []
+      "permissions":[
+        "nfc:allow-scan",
+        "nfc:allow-write",
+        "nfc:allow-is-available",
+        "nfc:default",
+        "biometric:allow-authenticate",
+        "barcode-scanner:allow-scan"
+      ]
     }
   ]
 }
