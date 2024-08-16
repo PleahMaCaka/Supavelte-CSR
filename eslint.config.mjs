@@ -10,81 +10,90 @@ import { FlatCompat } from "@eslint/eslintrc"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
 })
 
 // noinspection JSUnusedGlobalSymbols
-export default [{
+export default [
+  {
     ignores: [
-        "**/node_modules",
-        "build",
-        ".svelte-kit",
-        "package",
-        "**/.env",
-        "**/.env.*",
-        "!**/.env.example",
-        "**/pnpm-lock.yaml",
-        "**/package-lock.json",
-        "**/.idea",
-        "**/.fleet",
-        "src-tauri",
-        "src/lib/types/supabase.d.ts",
-        ".github/workflows/*",
-        ".pnpm-store/*"
-    ],
-}, ...compat.extends(
+      "**/node_modules",
+      "build",
+      ".svelte-kit",
+      "package",
+      "**/.env",
+      "**/.env.*",
+      "!**/.env.example",
+      "**/pnpm-lock.yaml",
+      "**/package-lock.json",
+      "**/.idea",
+      "**/.fleet",
+      "src-tauri",
+      "src/lib/types/supabase.d.ts",
+      ".github/workflows/*",
+      ".pnpm-store/*"
+    ]
+  },
+  ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:svelte/recommended",
-), {
+    "plugin:svelte/recommended"
+  ),
+  {
     plugins: {
-        "@typescript-eslint": typescriptEslint,
+      "@typescript-eslint": typescriptEslint
     },
-
     languageOptions: {
-        globals: {
-            ...globals.browser,
-            ...globals.node,
-        },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      },
 
-        parser: tsParser,
-        ecmaVersion: 2020,
-        sourceType: "module",
+      parser: tsParser,
+      ecmaVersion: 2020,
+      sourceType: "module",
 
-        parserOptions: {
-            extraFileExtensions: [".svelte", ".ts", ".json", ".yml"],
-        },
+      parserOptions: {
+        extraFileExtensions: [".svelte", ".ts", ".json", ".yml"]
+      }
     },
-
     rules: {
-        semi: ["error", "never"],
-        quotes: ["error", "double"],
-
-        indent: ["error", 4, {
-            SwitchCase: 1,
-        }],
-
-        "object-curly-spacing": ["error", "always"],
-        "eol-last": ["error", "always"],
-    },
-}, {
+      semi: ["error", "never"],
+      quotes: ["error", "double"],
+      indent: [
+        "error",
+        2,
+        {
+          SwitchCase: 1
+        }
+      ],
+      "object-curly-spacing": ["error", "always"],
+      "eol-last": ["error", "always"]
+    }
+  },
+  {
     files: ["**/*.svelte"],
-
     languageOptions: {
-        parser: parser,
-        ecmaVersion: 5,
-        sourceType: "script",
-
-        parserOptions: {
-            parser: "@typescript-eslint/parser",
-        },
-    },
-}, {
+      parser: parser,
+      ecmaVersion: 5,
+      sourceType: "script",
+      parserOptions: {
+        parser: "@typescript-eslint/parser"
+      }
+    }
+  },
+  {
     files: ["**/*.json", "**/*.yml"],
-
     rules: {
-        indent: ["error", 2],
-    },
-}]
+      indent: ["error", 2]
+    }
+  },
+  {
+    files: ["**/*.ts"],
+    rules: {
+      indent: ["error", 4]
+    }
+  }
+]

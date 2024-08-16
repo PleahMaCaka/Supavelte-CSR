@@ -2,7 +2,9 @@
   "$schema": "../gen/schemas/capabilities.json",
   "identifier": "default",
   "description": "enables the default permissions",
-  "windows": ["main"],
+  "windows": [
+    "main"
+  ],
   "permissions": [
     "path:default",
     "event:default",
