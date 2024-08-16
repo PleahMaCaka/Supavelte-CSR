@@ -3,13 +3,5 @@
   "extends": [
     "config:recommended"
   ],
-  "packageRules": [
-    {
-      "packageNames": [
-        "eslint"
-      ],
-      "allowedVersions": "8.57.0"
-    }
-  ],
   "automerge": true
 }
