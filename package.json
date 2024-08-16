@@ -37,7 +37,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tauri-apps/api": "^2.0.0-beta",
     "@tauri-apps/cli": "^2.0.0-beta",
-    "@types/eslint": "^8.56.10",
+    "@types/eslint": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
     "@typescript-eslint/parser": "^7.16.0",
     "autoprefixer": "^10.4.19",
