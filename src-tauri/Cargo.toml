@@ -1,8 +1,8 @@
 [package]
 name = "app"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Supavlete CSR Boilerplate"
+authors = ["PleahMaCaka"]
 license = ""
 repository = ""
 edition = "2021"
@@ -12,12 +12,12 @@ rust-version = "1.70"
 
 [lib]
 name = "app_lib"
-crate-type = ["staticlib", "cdylib", "rlib"]
+crate-type = ["staticlib", "cdylib", "lib"]
 
 [build-dependencies]
-tauri-build = { version = "2.0.0-beta.13", features = [] }
+tauri-build = { version = "2.0.0-beta", features = [] }
 
 [dependencies]
 serde_json = "1.0.116"
 serde = { version = "1.0.200", features = ["derive"] }
-tauri = { version = "2.0.0-beta.17", features = [] }
+tauri = { version = "2.0.0-rc", features = [] }
