@@ -33,7 +33,8 @@ export default [
       "src-tauri",
       "src/lib/types/supabase.d.ts",
       ".github/workflows/*",
-      ".pnpm-store/*"
+      ".pnpm-store/*",
+      "**/*.json"
     ]
   },
   ...compat.extends(
