@@ -33,20 +33,20 @@ export default [{
         "src/lib/types/supabase.d.ts",
         ".github/workflows/*",
         ".pnpm-store/*"
-    ],
+    ]
 }, ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:svelte/recommended",
+    "plugin:svelte/recommended"
 ), {
     plugins: {
-        "@typescript-eslint": typescriptEslint,
+        "@typescript-eslint": typescriptEslint
     },
 
     languageOptions: {
         globals: {
             ...globals.browser,
-            ...globals.node,
+            ...globals.node
         },
 
         parser: tsParser,
@@ -54,21 +54,21 @@ export default [{
         sourceType: "module",
 
         parserOptions: {
-            extraFileExtensions: [".svelte", ".ts", ".json", ".yml"],
-        },
+            extraFileExtensions: [".svelte", ".ts", ".json", ".yml"]
+        }
     },
 
     rules: {
         semi: ["error", "never"],
         quotes: ["error", "double"],
 
-        indent: ["error", 4, {
-            SwitchCase: 1,
+        indent: ["error", 2, {
+            SwitchCase: 1
         }],
 
         "object-curly-spacing": ["error", "always"],
-        "eol-last": ["error", "always"],
-    },
+        "eol-last": ["error", "always"]
+    }
 }, {
     files: ["**/*.svelte"],
 
@@ -78,13 +78,13 @@ export default [{
         sourceType: "script",
 
         parserOptions: {
-            parser: "@typescript-eslint/parser",
-        },
-    },
+            parser: "@typescript-eslint/parser"
+        }
+    }
 }, {
     files: ["**/*.json", "**/*.yml"],
 
     rules: {
-        indent: ["error", 2],
-    },
+        indent: ["error", 2]
+    }
 }]
