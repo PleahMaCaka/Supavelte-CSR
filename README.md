@@ -43,7 +43,11 @@ pnpm tauri dev
 
 - Open the project once in Android Studio to synchronize Gradle and other dependencies, or
   run `./gradlew --refresh-dependencies`.
-- Ensure Android SDK/NDK with JDK 17 is installed.
+
+#### Debugging:
+
+- To open DevTools for Android, go to `chrome://inspect` and click on `inspect` under the Tauri app (tauri.localhost).
+- To view logs, run `adb logcat | grep -i <package-name>` or use built-in IDE logcat (e.g. IntelliJ, Android Studio).
 
 #### Commands:
 
