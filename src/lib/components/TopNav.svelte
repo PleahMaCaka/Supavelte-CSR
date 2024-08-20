@@ -23,7 +23,7 @@
     </button>
   </div>
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl" href="/static">The App</a>
+    <a class="btn btn-ghost text-xl" href="/">Supavelte</a>
   </div>
   <div class="navbar-end">
     <!-- Notification -->
@@ -72,8 +72,8 @@
       </div>
       <!-- Profile Dropdown-->
       <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52">
-        <li><a href="/static">Profile</a></li>
-        <li><a href="/static">Settings</a></li>
+        <li><a href="/">Profile</a></li>
+        <li><a href="/">Settings</a></li>
         <li>
           <button on:click={logout}>Logout</button>
         </li>
