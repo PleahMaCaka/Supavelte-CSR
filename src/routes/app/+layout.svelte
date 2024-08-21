@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from "$app/navigation"
-  import Navbar from "@lib/components/TopNav.svelte"
+  import Navbar from "@lib/components/nav/TopNav.svelte"
   import { session as session } from "@stores/session"
 
   $: {
