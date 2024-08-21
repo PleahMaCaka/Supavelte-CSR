@@ -1,28 +1,18 @@
 {
   "$schema": "../gen/schemas/android-schema.json",
   "identifier": "mobile-capability",
-  "windows": [
-    "main"
-  ],
-  "platforms": [
-    "android"
-  ],
+  "windows": ["main"],
+  "platforms": ["android"],
   "permissions": [],
   "local": true,
   "capabilities": [
     {
       "local": true,
-      "platforms": [
-        "android"
-      ],
+      "platforms": ["android"],
       "description": "Android Cap",
       "identifier": "pleahmacaka",
-      "windows": [
-        "main"
-      ],
-      "permissions": [
-        "core:default"
-      ]
+      "windows": ["main"],
+      "permissions": ["core:default"]
     }
   ]
 }

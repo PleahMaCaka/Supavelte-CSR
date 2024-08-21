@@ -2,8 +2,8 @@
 
 ### Prerequisites:
 
-- Ensure the following are installed on your system:  
-  Node.js, PNPM, Deno (optional, for Supabase Functions), Rust, and Android SDK/NDK with JDK 17.
+-   Ensure the following are installed on your system:  
+    Node.js, PNPM, Deno (optional, for Supabase Functions), Rust, and Android SDK/NDK with JDK 17.
 
 ### Steps:
 
@@ -41,18 +41,18 @@ pnpm tauri dev
 
 #### Prerequisites:
 
-- Open the project once in Android Studio to synchronize Gradle and other dependencies, or
-  run `./gradlew --refresh-dependencies`.
+-   Open the project once in Android Studio to synchronize Gradle and other dependencies, or
+    run `./gradlew --refresh-dependencies`.
 
 #### Debugging:
 
-- To open DevTools for Android, go to `chrome://inspect` and click on `inspect` under the Tauri app (tauri.localhost).
-- To view logs, run `adb logcat | grep -i <package-name>` or use built-in IDE logcat (e.g. IntelliJ, Android Studio).
+-   To open DevTools for Android, go to `chrome://inspect` and click on `inspect` under the Tauri app (tauri.localhost).
+-   To view logs, run `adb logcat | grep -i <package-name>` or use built-in IDE logcat (e.g. IntelliJ, Android Studio).
 
 #### Commands:
 
-- For development: `pnpm tauri android dev`
-- For building: `pnpm tauri android build`
+-   For development: `pnpm tauri android dev`
+-   For building: `pnpm tauri android build`
 
 ### ✨ To Regenerate Android Project
 

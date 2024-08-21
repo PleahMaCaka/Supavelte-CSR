@@ -4,30 +4,34 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --host",
     "build": "vite build",
-    "preview": "vite preview",
+    "build-storybook": "storybook build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "test": "pnpm test:vitest test:supabase",
-    "test:vitest": "vitest",
-    "test:supabase": "supabase test db",
-    "lint": "eslint .",
-    "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts",
+    "dev": "vite dev --host",
     "init": "pnpm i && cp .env.example .env && pnpm init:android",
     "init:android": "pnpm tauri android init && cd ./src-tauri/gen/android && ./gradlew --refresh-dependencies && pnpm init:android:properties",
     "init:android:properties": "PTS_PATH=\"./src-tauri/gen/android/local.properties\" && touch $PTS_PATH && echo \"sdk.dir=$ANDROID_HOME\" > $PTS_PATH",
+    "lint": "eslint . --fix",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "supabase": "supabase",
     "tauri": "NO_STRIP=true tauri",
     "tauri:icon": "tauri icon static/favicon.png",
-    "supabase": "supabase",
-    "prepare": "husky",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "pnpm test:vitest test:supabase",
+    "test:supabase": "supabase test db",
+    "test:vitest": "vitest",
+    "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts"
   },
-  "packageManager": "pnpm@9.7.1",
   "lint-staged": {
     "src/**": [
       "eslint"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
     ]
   },
   "devDependencies": {
@@ -56,6 +60,8 @@
     "daisyui": "^4.12.10",
     "dotenv": "^16.4.5",
     "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-svelte": "^2.43.0",
     "globals": "^15.9.0",
@@ -75,14 +81,10 @@
     "vite": "^5.4.1",
     "vitest": "^2.0.5"
   },
+  "packageManager": "pnpm@9.7.1",
   "pnpm": {
     "overrides": {
       "whatwg-url": "^14.0.0"
     }
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
