@@ -14,7 +14,7 @@ indent_style = space
 end_of_line = LF
 charset = UTF-8
 
-[*.{svelte,config.js,config.mjs,yml,json}]
+[*.{svelte,config.js,config.mjs,yml,json,mdx}]
 indent_size = 2
 
 [*.ts]
