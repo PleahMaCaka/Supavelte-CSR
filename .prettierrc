@@ -1,0 +1,37 @@
+{
+  "endOfLine": "lf",
+  "tabWidth": 4,
+  "useTabs": false,
+  "trailingComma": "none",
+  "singleQuote": false,
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "semi": false,
+  "overrides": [
+    {
+      "files": [
+        "*.svelte",
+        "*.config.js",
+        "*.config.mjs",
+        "*.yml",
+        "*.json",
+        "*.mdx",
+        ".prettierrc"
+      ],
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-svelte",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-packagejson"
+  ]
+}

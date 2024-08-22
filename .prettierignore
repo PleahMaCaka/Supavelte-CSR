@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build
+coverage
+.svelte-kit
+src-tauri/target
+
+node_modules
+vite.config.ts
+
+pnpm-lock.yaml
+src-tauri/Cargo.lock
