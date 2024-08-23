@@ -6,7 +6,7 @@
   export let label: string = type
   export let value: string = ""
 
-  function inputType(node: HTMLInputElement) {
+  const inputType = (node: HTMLInputElement) => {
     node.type = type
   }
 </script>
