@@ -28,7 +28,7 @@
     </button>
   </div>
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl" href="/static">Supavelte</a>
+    <a class="btn btn-ghost text-xl" href="/">Supavelte</a>
   </div>
   <div class="navbar-end">
     <!-- Notification -->
@@ -41,11 +41,11 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2" /></svg>
+          ><path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2" /></svg>
           {#if get(stateStore).unreadNotify}
             <span class="badge indicator-item badge-primary badge-xs" />
           {/if}
@@ -73,7 +73,7 @@
             <button class="btn btn-sm">See</button>
           </div>
           <p class="mt-1 self-center rounded-box bg-zinc-900 px-2 py-0.5">
-            <a href="/static">See all >></a>
+            <a href="/">See all >></a>
           </p>
         </div>
       </div>
@@ -93,8 +93,8 @@
       <!-- Profile Dropdown-->
       <ul
         class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow-lg">
-        <li><a href="/static">Profile</a></li>
-        <li><a href="/static">Settings</a></li>
+        <li><a href="/">Profile</a></li>
+        <li><a href="/">Settings</a></li>
         <li>
           <button on:click={logout}>Logout</button>
         </li>
