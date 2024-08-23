@@ -6,8 +6,8 @@ export const session = (() => {
 
     return {
         ...store,
-        getUser: async (): Promise<User | null> => {
-            return get(session)?.user ?? null
-        }
+        getUser: (): User | null => {
+            return get(store)?.user ?? null
+        },
     }
 })()
