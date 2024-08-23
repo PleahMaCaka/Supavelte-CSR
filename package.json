@@ -22,6 +22,7 @@
     "test": "pnpm test:vitest test:supabase",
     "test:supabase": "supabase test db",
     "test:vitest": "vitest",
+    "vitest": "vitest",
     "typegen": "supabase gen types typescript --linked > src/lib/types/gen/supabase.d.ts"
   },
   "lint-staged": {
