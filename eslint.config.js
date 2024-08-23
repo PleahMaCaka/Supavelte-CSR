@@ -63,9 +63,9 @@ export default [
     rules: {
       semi: ["error", "never"],
       quotes: ["error", "double"],
+      "comma-dangle": ["error", "never"],
       indent: [
-        "error",
-        2,
+        "error", 2,
         {
           SwitchCase: 1
         }
@@ -83,18 +83,6 @@ export default [
       parserOptions: {
         parser: "@typescript-eslint/parser"
       }
-    }
-  },
-  {
-    files: ["**/*.json", "**/*.yml"],
-    rules: {
-      indent: ["error", 2]
-    }
-  },
-  {
-    files: ["**/*.ts"],
-    rules: {
-      indent: ["error", 4]
     }
   }
 ]

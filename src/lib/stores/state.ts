@@ -5,11 +5,11 @@ export interface State {
 }
 
 export const stateStore = (() => {
-    const store = writable<State>({
-        unreadNotify: true
-    })
+  const store = writable<State>({
+    unreadNotify: true
+  })
 
-    return {
-        ...store
-    }
+  return {
+    ...store
+  }
 })()
