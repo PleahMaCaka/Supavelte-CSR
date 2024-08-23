@@ -17,5 +17,10 @@ export default defineConfig({
         port: 1430
       }
       : undefined
+  },
+  test: {
+    include: [
+      "**/*.test.ts"
+    ]
   }
 })
