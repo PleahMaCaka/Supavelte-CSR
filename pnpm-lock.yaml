@@ -31,7 +31,7 @@ importers:
         version: 3.1.2(svelte@4.2.19)(vite@5.4.2(@types/node@22.5.0)(sass@1.77.8))
       '@tabler/icons-svelte':
         specifier: ^3.12.0
-        version: 3.13.0(svelte@4.2.19)
+        version: 3.14.0(svelte@4.2.19)
       '@tauri-apps/api':
         specifier: ^2.0.0-rc.0
         version: 2.0.0-rc.3
@@ -462,13 +462,13 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       vite: ^5.0.0
 
-  '@tabler/icons-svelte@3.13.0':
-    resolution: {integrity: sha512-rj1rhbjroFLpBZvkbX9XgVUNVJDNfxe2YJfM7Q35yyMxlV+jNu85U+qewu+HDCNjfxNdskBNTCVbyC7KGTwExQ==}
+  '@tabler/icons-svelte@3.14.0':
+    resolution: {integrity: sha512-1o1ldrD+w8IoCCnOgBy2b8pip6Vio7sOHN+z7w4k9FBXnCZubbLvLYONWWFWqCESsugEc5q2Vhxm8B3Rjw4yPA==}
     peerDependencies:
       svelte: '>=3 <6 || >=5.0.0-next.0'
 
-  '@tabler/icons@3.13.0':
-    resolution: {integrity: sha512-5STudfFoCeYZuDwH5k9A1j6YIRrkrwufMUWxf+wrwCkzWMN6PAyAWVJkx1RNW09szGZ4OKa2hEc2NRGPjh/MNQ==}
+  '@tabler/icons@3.14.0':
+    resolution: {integrity: sha512-OakKjK1kuDWKoNwdnHHVMt11kTZAC10iZpN/8o/CSYdeBH7S3v5n8IyqAYynFxLI8yBGTyBvljtvWdmWh57zSg==}
 
   '@tauri-apps/api@2.0.0-rc.3':
     resolution: {integrity: sha512-k1erUfnoOFJwL5VNFZz0BQZ2agNstG7CNOjwpdWMl1vOaVuSn4DhJtXB0Deh9lZaaDlfrykKOyZs9c3XXpMi5Q==}
@@ -2216,12 +2216,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tabler/icons-svelte@3.13.0(svelte@4.2.19)':
+  '@tabler/icons-svelte@3.14.0(svelte@4.2.19)':
     dependencies:
-      '@tabler/icons': 3.13.0
+      '@tabler/icons': 3.14.0
       svelte: 4.2.19
 
-  '@tabler/icons@3.13.0': {}
+  '@tabler/icons@3.14.0': {}
 
   '@tauri-apps/api@2.0.0-rc.3': {}
 
