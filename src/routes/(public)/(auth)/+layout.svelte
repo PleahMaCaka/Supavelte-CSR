@@ -9,8 +9,7 @@
   let loading = false
 
   onMount(async () => {
-    if (get(session)?.user)
-      await goto("/app")
+    if (get(session)?.user) await goto("/app")
   })
 
   const oauth = async (provider: Provider) => {
@@ -32,32 +31,30 @@
   }
 </script>
 
-<div class="flex flex-col items-center justify-center min-h-screen">
-  <div class="flex flex-col items-center rounded-lg shadow-md
-            p-6 w-full max-w-md space-y-3
-            dark:bg-base-300 bg-zinc-100"
-  >
+<div class="flex min-h-screen flex-col items-center justify-center">
+  <div
+    class="flex w-full max-w-md flex-col items-center
+           space-y-3 rounded-lg bg-zinc-100 p-6
+           shadow-md dark:bg-base-300">
     <div class="size-full px-1">
       <slot />
     </div>
     <!-- Social Logins-->
-    <div class="divider divider-success text-sm opacity-85">
-      OR
-    </div>
-    <div class="flex flex-col w-full gap-2">
-      <button class="flex w-full justify-center rounded-md border p-1.5
-                       disabled:cursor-not-allowed disabled:opacity-50
-                       bg-white border-gray-300
-                       dark:bg-zinc-100 hover:brightness-[98%] dark:hover:brightness-[98%] duration-150"
-              disabled={loading}
-              name="provider"
-              on:click={()=> oauth("google")}
-      >
-        <svg class="h-6 w-auto"
-             preserveAspectRatio="xMidYMid"
-             viewBox="0 0 256 262"
-             xmlns="http://www.w3.org/2000/svg"
-        >
+    <div class="divider divider-success text-sm opacity-85">OR</div>
+    <div class="flex w-full flex-col gap-2">
+      <button
+        class="flex w-full justify-center rounded-md border border-gray-300
+                       bg-white p-1.5
+                       duration-150 hover:brightness-[98%]
+                       disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-100 dark:hover:brightness-[98%]"
+        disabled={loading}
+        name="provider"
+        on:click={() => oauth("google")}>
+        <svg
+          class="h-6 w-auto"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 262"
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
             fill="#4285F4" />
