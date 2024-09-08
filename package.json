@@ -19,7 +19,7 @@
     "supabase": "supabase",
     "tauri": "tauri",
     "tauri:icon": "tauri icon static/favicon.png",
-    "test": "pnpm test:vitest test:supabase",
+    "test": "pnpm test:vitest && pnpm test:supabase",
     "test:supabase": "supabase test db",
     "test:vitest": "vitest",
     "vitest": "vitest",
@@ -36,10 +36,8 @@
     ]
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.7.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
-    "@playwright/test": "^1.46.1",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
