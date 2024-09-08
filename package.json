@@ -17,7 +17,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "supabase": "supabase",
-    "tauri": "NO_STRIP=true tauri",
+    "tauri": "tauri",
     "tauri:icon": "tauri icon static/favicon.png",
     "test": "pnpm test:vitest test:supabase",
     "test:supabase": "supabase test db",
