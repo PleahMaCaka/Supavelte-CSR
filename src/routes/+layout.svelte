@@ -6,11 +6,18 @@
   import { get } from "svelte/store"
   import { goto } from "$app/navigation"
 
+  let path = location.pathname
+
   const handle = (newSession: AuthSession | null) => {
+    // Prevent moving to the `/app` path when the window is reactivated from an inactive state.
+    if (path.startsWith("/app"))
+      return
+
     session.set(newSession)
+
     if (
-      location.pathname.match(/^\/app[/\w-]*$/) &&
-      (!newSession || get(session) === null)
+      path.match(/^\/app[/\w-]*$/) &&
+      (!newSession || !get(session))
     ) goto("/signin")
   }
 
