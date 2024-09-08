@@ -19,7 +19,7 @@
     "supabase": "supabase",
     "tauri": "tauri",
     "tauri:icon": "tauri icon static/favicon.png",
-    "test": "pnpm test:vitest && pnpm test:supabase",
+    "test": "pnpm test:vitest",
     "test:supabase": "supabase test db",
     "test:vitest": "vitest",
     "vitest": "vitest",
