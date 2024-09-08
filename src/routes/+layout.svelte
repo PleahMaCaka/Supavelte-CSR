@@ -11,9 +11,7 @@
     if (
       location.pathname.match(/^\/app[/\w-]*$/) &&
       (!newSession || get(session) === null)
-    ) {
-      void goto("/signin")
-    }
+    ) goto("/signin")
   }
 
   supa.auth.getSession().then(({ data }) => {
