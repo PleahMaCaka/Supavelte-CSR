@@ -1,7 +1,11 @@
 {
   "$schema": "../gen/schemas/capabilities.json",
   "identifier": "default",
-  "description": "enables the default permissions",
-  "windows": ["main"],
-  "permissions": ["core:default"]
+  "description": "Default Capabilities",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default"
+  ]
 }

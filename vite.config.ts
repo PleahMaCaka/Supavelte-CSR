@@ -22,5 +22,9 @@ export default defineConfig({
     include: [
       "**/*.test.ts"
     ]
+  },
+  optimizeDeps: {
+    include: ["lucide-svelte"],
+    force: true
   }
 })

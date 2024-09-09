@@ -4,7 +4,7 @@
   "identifier": "io.github.pleahmacaka.Supavelte",
   "build": {
     "frontendDist": "../build",
-    "devUrl": "http://0.0.0.0:1420/",
+    "devUrl": "http://localhost:1420/",
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build"
   },
@@ -20,7 +20,11 @@
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "capabilities": [
+        "default",
+        "mobile"
+      ]
     }
   },
   "bundle": {
@@ -34,5 +38,5 @@
       "icons/icon.ico"
     ]
   },
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json"
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json"
 }

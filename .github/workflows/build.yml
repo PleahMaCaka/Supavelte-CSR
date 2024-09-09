@@ -9,7 +9,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ ubuntu-latest ]
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -78,6 +78,9 @@ jobs:
 
       - name: Run ESLint
         run: pnpm lint
+
+      - name: Run Tests
+        run: pnpm test
 
       - name: Build
         run: pnpm build
