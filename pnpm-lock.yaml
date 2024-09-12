@@ -105,8 +105,8 @@ importers:
         specifier: ^15.2.9
         version: 15.2.10
       lucide-svelte:
-        specifier: ^0.440.0
-        version: 0.440.0(svelte@4.2.19)
+        specifier: ^0.441.0
+        version: 0.441.0(svelte@4.2.19)
       postcss:
         specifier: ^8.4.41
         version: 8.4.45
@@ -2254,8 +2254,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-svelte@0.440.0:
-    resolution: {integrity: sha512-ROM+AbSCvM7b2qt47Raoc/B3LyJWfrePdRiW91jlKdMVBnwCcR8+lqpDpJ09vM75wMKqf+4Hxb9GQRRgRAK1Hg==}
+  lucide-svelte@0.441.0:
+    resolution: {integrity: sha512-lwckKpu4KNth7EBPWUdx7dvRaBrFC173JSdioN2WILol7nwFAPfvbGLeez8ZlnT31boj7pNT7hjvBz3ZJfmUbQ==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5.0.0-next.42
 
@@ -5566,7 +5566,7 @@ snapshots:
       yallist: 3.1.1
     optional: true
 
-  lucide-svelte@0.440.0(svelte@4.2.19):
+  lucide-svelte@0.441.0(svelte@4.2.19):
     dependencies:
       svelte: 4.2.19
 
