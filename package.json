@@ -51,7 +51,7 @@
     "@sveltejs/kit": "^2.5.22",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tauri-apps/api": "^2.0.0-rc.0",
-    "@tauri-apps/cli": "2.0.0-rc.15",
+    "@tauri-apps/cli": "2.0.0-rc.16",
     "@types/eslint": "^9.6.0",
     "@types/node": "^22.5.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
