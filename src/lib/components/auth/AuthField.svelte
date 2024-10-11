@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { HTMLInputTypeAttribute } from "svelte/elements"
-  import { Key, Mail } from "lucide-svelte"
+  import Icon from "@iconify/svelte"
 
   export let type: HTMLInputTypeAttribute = "text"
   export let label: string = type
@@ -16,9 +16,9 @@
 </span>
 <label class="input input-bordered flex items-center gap-2">
   {#if type === "email"}
-    <Mail class="size-4 opacity-70" />
+    <Icon icon="heroicons-solid:mail" class="size-4 opacity-70" />
   {:else if type === "password"}
-    <Key class="size-4 opacity-70" />
+    <Icon icon="heroicons-solid:key" class="size-4 opacity-70" />
   {/if}
   <input bind:value class="grow" name={type} required use:inputType />
 </label>

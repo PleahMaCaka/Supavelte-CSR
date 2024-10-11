@@ -24,7 +24,7 @@ export default defineConfig({
     ]
   },
   optimizeDeps: {
-    include: ["lucide-svelte"],
+    include: ["@iconify/svelte"],
     force: true
   }
 })
