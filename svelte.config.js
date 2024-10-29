@@ -11,10 +11,10 @@ const config = {
     }),
     alias: {
       "@lib/*": "./src/lib/*",
-      "@components/*": "./src/components/*",
+      "@components/*": "./src/lib/components/*",
       "@stores/*": "./src/lib/stores/*",
-      "@routes/*": "./src/routes/*",
-      "@typegen/*": "./src/lib/types/gen/*"
+      "@typegen/*": "./src/lib/types/gen/*",
+      "@routes/*": "./src/routes/*"
     }
   }
 }
